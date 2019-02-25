@@ -2,14 +2,14 @@ var context, controller, rectangle, loop;
 
 context = document.querySelector("canvas").getContext("2d");
 
-context.canvas.height = 1920;
-context.canvas.width = 1080;
+context.canvas.height = innerHeight;
+context.canvas.width = innerWidth;
 
 rectangle = {
 
-  height:32,
+  height:100,
   jumping:true,
-  width:32,
+  width:100,
   x:144, // center of the canvas
   x_velocity:0,
   y:0,
@@ -45,7 +45,7 @@ controller = {
 };
 
 loop = function() {
-
+  //gravity
   if (controller.up && rectangle.jumping == false) {
 
     rectangle.y_velocity -= 20;
@@ -55,13 +55,13 @@ loop = function() {
 
   if (controller.left) {
 
-    rectangle.x_velocity -= 0.5;
+    rectangle.x_velocity -= 1;
 
   }
 
   if (controller.right) {
 
-    rectangle.x_velocity += 0.5;
+    rectangle.x_velocity += 1;
 
   }
 
@@ -92,7 +92,7 @@ loop = function() {
   }
 
   context.fillStyle = "#202020";
-  context.fillRect(0, 0, 320, 180);// x, y, width, height
+  context.fillRect(0, 0, innerWidth-100, innerHeight-100);// x, y, width, height
   context.fillStyle = "#ff0000";// hex for red
   context.beginPath();
   context.rect(rectangle.x, rectangle.y, rectangle.width, rectangle.height);
