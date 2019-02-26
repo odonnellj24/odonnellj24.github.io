@@ -92,7 +92,7 @@ loop = function() {
   }
 
   context.fillStyle = "#202020";
-  context.fillRect(0, 0, innerWidth-100, innerHeight-100);// x, y, width, height
+  context.fillRect(0, 0, window.screen.height-100, window.screen.width-100);// x, y, width, height
   context.fillStyle = "#ff0000";// hex for red
   context.beginPath();
   context.rect(rectangle.x, rectangle.y, rectangle.width, rectangle.height);
@@ -100,7 +100,7 @@ loop = function() {
   context.strokeStyle = "#202830";
   context.lineWidth = 4;
   context.beginPath();
-  context.moveTo(0, 164);
+  context.moveTo(0, window.screen.width);
   context.lineTo(320, 164);
   context.stroke();
 
