@@ -2,7 +2,7 @@ var context, controller, rectangle, loop;
 
 context = document.querySelector("canvas").getContext("2d");
 
-context.canvas.height = 1920;
+context.canvas.height = 1080;
 context.canvas.width = 1080;
 
 rectangle = {
@@ -83,16 +83,16 @@ loop = function() {
   // if rectangle is going off the left of the screen
   if (rectangle.x < -32) {
 
-    rectangle.x = 1920;
+    rectangle.x = 1080;
 
-  } else if (rectangle.x > 1920) {// if rectangle goes past right boundary
+  } else if (rectangle.x > 1080) {// if rectangle goes past right boundary
 
     rectangle.x = -32;
 
   }
 
   context.fillStyle = "#202020";
-  context.fillRect(0, 0, 1080-100, 1920-100);// x, y, width, height
+  context.fillRect(0, 0, 1080-100, 1080-100);// x, y, width, height
   context.fillStyle = "#ff0000";// hex for red
   context.beginPath();
   context.rect(rectangle.x, rectangle.y, rectangle.width, rectangle.height);
