@@ -2,8 +2,8 @@ var context, controller, rectangle, loop;
 
 context = document.querySelector("canvas").getContext("2d");
 
-context.canvas.height = window.screen.height;
-context.canvas.width = window.screen.width;
+context.canvas.height = 500;
+context.canvas.width = 500;
 
 rectangle = {
 
