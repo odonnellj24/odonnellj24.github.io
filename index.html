@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Add a gray background color with some padding */
+body {
+  font-family: Comic sans-serif;
+  padding: 20px;
+  background: white;
+}
+
+/* Header/Blog Title */
+.header {
+  padding: 30px;
+  font-size: 40px;
+  text-align: center;
+  background: skyblue;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {
+  background-color:gray;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+   background-color: skyblue;
+   padding: 20px;
+   margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Footer */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #ddd;
+  margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h2>Jack O'Donnell</h2>
+</div>
+
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>Job searching begins</h2>
+      <h5>Today I begin my search for meaningful employment after graduation, Sept 4, 2019</h5>
+      <p></p>
+      <p>Must now figure out how to balance school, work, hobbies, personal projects, interview prep and job searching. </p>
+    </div>
+    
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>About Me</h2>
+      <body>
+        <img src="pics/selfie.JPG"  height="150" width="200" alt = "Selfie Pic">
+      </body>
+      <p>Hello, my name is Jack and this is my blog. I will be graduting with a Computer Science degree from University of Illinois at Chicago in May of 2020. I like playing basketball, making videogames, playing video games, playing ping pong, writing about my thoughts, building things I never finish, coding things I never finish, creating art and writing endless run-ons. </p>
+      <p></p>
+    </div>
+    <div class="card">
+      <h3>My Links</h3>
+      <body>
+       <a href="https://github.com/odonnellj24"target="_blank"><img src="pics/github.png" height="100" width="100" alt = "Github link"/></a>
+      </body>
+      <body>
+        <a href="https://www.linkedin.com/in/jack-odon/"target="_blank"><img src="pics/linkedin.png" height="100" width="100" alt = "Linkedin link"/></a>
+      </body>
+      <body>
+        <a href="pics/jackodonnell_resume.pdf"target="_blank"><img src="pics/resume.png" height="100" width="100" alt = "Resume link"/></a>
+      </body>
+      
+    </div>
+    <div class="card">
+      <h3>Contact me</h3>
+      <p>odonnellj24@gmail.com</p>
+      <p></p>
+    </div>
+  </div>
+</div>
+
+
+
+</body>
+</html>
+
